@@ -9,8 +9,8 @@
       </li>
       <li class="header">Питомцы</li>
 
-      <li <?=($_SERVER['PHP_SELF']=='#')?'class="active"':'';?>>
-        <a href="#"><i class="fa fa-users"></i><span>#</span></a>
+      <li <?=($_SERVER['PHP_SELF']=='/list-mammal.php')?'class="active"':'';?>>
+        <a href="list-mammal.php"><i class="fa fa-users"></i><span>Список млекопитающих</span></a>
       </li>
       
 
