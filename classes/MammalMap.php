@@ -44,11 +44,4 @@ class MammalMap extends BaseMap{
         }
         return false;
     }
-    public function findProfileById($id=null){
-        if ($id) {
-            $res = $this->db->query("SELECT teacher.user_id, otdel.name AS otdel FROM teacher INNER JOIN otdel ON teacher.otdel_id=otdel.otdel_id WHERE teacher.user_id = $id");
-            return $res->fetch(PDO::FETCH_OBJ);
-            }
-            return false;
-    }
 }

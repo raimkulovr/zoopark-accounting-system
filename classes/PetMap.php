@@ -15,7 +15,7 @@ class PetMap extends BaseMap{
         return $res->fetchAll(PDO::FETCH_ASSOC);
     }
     public function arrDiets(){
-        $res = $this->db->query("SELECT diet_id AS id, name AS value FROM diet");
+        $res = $this->db->query("SELECT diet_id AS id, CONCAT( diet_type.name, ' - ',diet.name) AS value FROM diet INNER JOIN diet_type ON diet.diet_type_id=diet_type.diet_type_id");
         return $res->fetchAll(PDO::FETCH_ASSOC);
     }
     public function arrHabitats(){

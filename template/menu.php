@@ -12,7 +12,9 @@
       <li <?=($_SERVER['PHP_SELF']=='/list-mammal.php')?'class="active"':'';?>>
         <a href="list-mammal.php"><i class="fa fa-users"></i><span>Список млекопитающих</span></a>
       </li>
-      
+      <li <?=($_SERVER['PHP_SELF']=='/list-birds.php')?'class="active"':'';?>>
+        <a href="list-birds.php"><i class="fa fa-users"></i><span>Список птиц</span></a>
+      </li>
 
       
 

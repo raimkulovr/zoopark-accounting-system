@@ -5,7 +5,7 @@ if (isset($_GET['id'])) {
     $id = Helper::clearInt($_GET['id']);
 }
 $mammal = (new MammalMap())->findById($id);
-$header = (($id)?'Редактировать данные':'Добавить').' питомца ';
+$header = (($id)?'Редактировать данные':'Добавить').' млекопитающее ';
 require_once 'template/header.php';
 ?>
 
@@ -14,7 +14,7 @@ require_once 'template/header.php';
     <ol class="breadcrumb">
         <li><a href="/index.php"><i class="fa fa-dashboard"></i> Главная</a></li>
         <li><a href="list-mammal.php">Cписок млекопитающих</a></li>
-        <li><a href="profile-mammal.php?id=<?=$id?>">Профиль питомца</a></li>
+        
         <li class="active"><?=$header;?></li>
     </ol>
 </section>
