@@ -50,7 +50,7 @@ desired effect
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
 -->
-<body class="hold-transition skin-blue  sidebar-mini sidebar-collapse">
+<body class="hold-transition skin-blue  sidebar-mini">
 <div class="wrapper">
 
   <!-- Main Header -->
