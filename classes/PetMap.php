@@ -10,6 +10,16 @@ class PetMap extends BaseMap{
         }
         return new Pet();
     }
+    public function findAll($ofset=0, $limit=30){
+        $res = $this->db->query("SELECT pet.name AS name, pet.birthday AS birthday, gender.name AS gender, diet.name AS diet, habitat.name AS habitat FROM pet INNER JOIN gender ON pet.gender_id=gender.gender_id INNER JOIN diet ON pet.diet_id=diet.diet_id INNER JOIN habitat ON pet.habitat_id=habitat.habitat_id LIMIT $ofset, $limit");
+        
+        return $res->fetchAll(PDO::FETCH_OBJ);
+    }
+    public function count(){
+        $res = $this->db->query("SELECT COUNT(*) AS cnt FROM pet");
+        return $res->fetch(PDO::FETCH_OBJ)->cnt;
+    }
+
     public function arrGenders(){
         $res = $this->db->query("SELECT gender_id AS id, name AS value FROM gender");
         return $res->fetchAll(PDO::FETCH_ASSOC);

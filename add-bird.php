@@ -22,7 +22,7 @@ require_once 'template/header.php';
 </section>
 
 <div class="box-body">
-<?php print_r($bird); ?>
+
 <form action="save-bird.php" method="POST">
     <?php require_once '_formPet.php'; ?>   
     <div class="form-group">

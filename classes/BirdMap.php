@@ -44,9 +44,11 @@ class BirdMap extends BaseMap{
     private function update(Bird $bird){
         $date_out = $this->db->quote($bird->date_out);  
         $date_in = $this->db->quote($bird->date_in);  
-        if ($this->db->exec("UPDATE bird SET pet_id = $bird->pet_id, country_id = $bird->country_id, date_out=$date_out, date_in =$date_in WHERE pet_id=".$bird->pet_id) == 1) {
+        if ($this->db->exec("UPDATE bird SET country_id = $bird->country_id, date_out=$date_out, date_in =$date_in WHERE pet_id=".$bird->pet_id) == 1) {
+            
             return true;
         }
+        
         return false;
     }
     public function findBirdProfileById($id=null){
